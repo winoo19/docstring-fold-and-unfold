@@ -1,0 +1,41 @@
+# Ignore node_modules folder
+node_modules/
+
+# Ignore output folders
+out/
+
+# Ignore TypeScript build artifacts
+*.js
+*.js.map
+*.d.ts
+
+# Ignore lock files
+package-lock.json
+yarn.lock
+
+# Ignore Visual Studio Code workspace and environment settings
+.vscode/
+
+# Ignore test results and coverage files
+coverage/
+*.log
+
+# Ignore vscode extensions tests results
+.vscode-test/
+
+# Ignore build config and dist files
+dist/
+
+# Ignore compiled typescript files
+out-tsc/
+*.tsbuildinfo
+
+# Ignore environment config
+.env
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore miscellaneous files
+.vscodeignore

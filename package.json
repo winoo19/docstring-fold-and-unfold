@@ -1,0 +1,52 @@
+{
+  "name": "docstring-fold-and-unfold",
+  "displayName": "Docstring Fold and Unfold",
+  "description": "Toggle fold state for python docstrings",
+  "version": "0.0.1",
+  "publisher": "daniel-sanchez",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+  "commands": [
+    {
+      "command": "extension.foldDocstrings",
+      "title": "Fold All Docstrings"
+    },
+    {
+      "command": "extension.unfoldDocstrings",
+      "title": "Unfold All Docstrings"
+    },
+    {
+      "command": "extension.toggleDocstrings",
+      "title": "Toggle All Docstrings"
+    }
+  ]
+},
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.94.0",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
