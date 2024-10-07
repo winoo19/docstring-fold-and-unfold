@@ -39,3 +39,6 @@ Thumbs.db
 
 # Ignore miscellaneous files
 .vscodeignore
+
+# Ignore packaged extension
+*.vsix
