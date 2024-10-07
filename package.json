@@ -2,7 +2,7 @@
   "name": "docstring-fold-and-unfold",
   "displayName": "Docstring Fold and Unfold",
   "description": "Toggle fold state for python docstrings",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "DanielSanchez",
   "engines": {
     "vscode": "^1.94.0"
@@ -15,41 +15,41 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-  "commands": [
-    {
-      "command": "extension.foldDocstrings",
-      "title": "Fold All Docstrings"
-    },
-    {
-      "command": "extension.unfoldDocstrings",
-      "title": "Unfold All Docstrings"
-    },
-    {
-      "command": "extension.toggleDocstrings",
-      "title": "Toggle All Docstrings"
-    }
-  ],
-  "keybindings": [
-    {
-      "command": "extension.foldDocstrings",
-      "key": "ctrl+k ctrl+h",
-      "mac": "cmd+k cmd+h",
-      "when": "editorTextFocus && editorLangId == 'python'"
-    },
-    {
-      "command": "extension.unfoldDocstrings",
-      "key": "ctrl+k ctrl+g",
-      "mac": "cmd+k cmd+g",
-      "when": "editorTextFocus && editorLangId == 'python'"
-    },
-    {
-      "command": "extension.toggleDocstrings",
-      "key": "ctrl+k ctrl+a",
-      "mac": "cmd+k cmd+a",
-      "when": "editorTextFocus && editorLangId == 'python'"
-    }
-  ]
-},
+    "commands": [
+      {
+        "command": "extension.foldDocstrings",
+        "title": "Fold All Docstrings"
+      },
+      {
+        "command": "extension.unfoldDocstrings",
+        "title": "Unfold All Docstrings"
+      },
+      {
+        "command": "extension.toggleDocstrings",
+        "title": "Toggle All Docstrings"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.foldDocstrings",
+        "key": "ctrl+k ctrl+h",
+        "mac": "cmd+k cmd+h",
+        "when": "editorTextFocus && editorLangId == 'python'"
+      },
+      {
+        "command": "extension.unfoldDocstrings",
+        "key": "ctrl+k ctrl+g",
+        "mac": "cmd+k cmd+g",
+        "when": "editorTextFocus && editorLangId == 'python'"
+      },
+      {
+        "command": "extension.toggleDocstrings",
+        "key": "ctrl+k ctrl+a",
+        "mac": "cmd+k cmd+a",
+        "when": "editorTextFocus && editorLangId == 'python'"
+      }
+    ]
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
