@@ -3,7 +3,7 @@
   "displayName": "Docstring Fold and Unfold",
   "description": "Toggle fold state for python docstrings",
   "version": "0.0.1",
-  "publisher": "daniel-sanchez",
+  "publisher": "DanielSanchez",
   "engines": {
     "vscode": "^1.94.0"
   },
