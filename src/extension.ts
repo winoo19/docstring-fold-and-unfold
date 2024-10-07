@@ -34,6 +34,9 @@ function foldOrUnfoldDocstrings(action: "fold" | "unfold") {
   // Regex to match Python docstrings
   const docstringRegex = /("""[\s\S]*?"""|'''[\s\S]*?''')/g;
 
+  const originalSelections = editor.selections;
+  const visibleRange = editor.visibleRanges[0];
+
   let match;
   while ((match = docstringRegex.exec(docText)) !== null) {
     const matchStartIndex = match.index;
@@ -51,6 +54,10 @@ function foldOrUnfoldDocstrings(action: "fold" | "unfold") {
       vscode.commands.executeCommand("editor.unfold", { selectionLines: [startPos.line] });
     }
   }
+
+  // Restore the original selections
+  editor.selections = originalSelections;
+  editor.revealRange(visibleRange, vscode.TextEditorRevealType.AtTop);
 }
 
 function toggleDocstrings() {
@@ -64,6 +71,9 @@ function toggleDocstrings() {
   const docText = doc.getText();
   const docstringRegex = /("""[\s\S]*?"""|'''[\s\S]*?''')/g;
 
+  const originalSelections = editor.selections;
+  const visibleRange = editor.visibleRanges[0];
+
   let match;
   while ((match = docstringRegex.exec(docText)) !== null) {
     const matchStartIndex = match.index;
@@ -73,6 +83,10 @@ function toggleDocstrings() {
     editor.selection = new vscode.Selection(startPos, startPos);
     vscode.commands.executeCommand("editor.toggleFold");
   }
+
+  // Restore the original selections
+  editor.selections = originalSelections;
+  editor.revealRange(visibleRange, vscode.TextEditorRevealType.AtTop);
 }
 
 export function deactivate() {}
