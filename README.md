@@ -21,9 +21,9 @@ This extension provides the following commands:
   - **Unfold Python Docstrings**
   - **Toggle Python Docstrings**
 - Alternatively, you can use the following keyboard shortcuts:
-  - **Fold Python Docstrings**: `Ctrl+K+H`
-  - **Unfold Python Docstrings**: `Ctrl+K+G`
-  - **Toggle Python Docstrings**: `Ctrl+K+A`
+  - **Fold Python Docstrings**: `ctrl+k ctrl+h`
+  - **Unfold Python Docstrings**: `ctrl+k ctrl+g`
+  - **Toggle Python Docstrings**: `ctrl+k ctrl+a`
 
 ## Installation
 
@@ -41,7 +41,11 @@ No additional settings required.
 
 ### 0.0.1
 
-- Initial release of Python Docstring Folding Extension.
+- Initial release of Docstring Fold and Unfold.
+
+### 1.0.0
+
+- Keep the cursor and the screen position after folding/unfolding.
 
 ## License
 
